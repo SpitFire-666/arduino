@@ -148,12 +148,10 @@ http://arduino.esp8266.com/stable/package_esp8266com_index.json
 ![image](https://user-images.githubusercontent.com/38451588/173273458-779e091e-7382-4fdb-ac6e-0c2eed6d9bbe.png)
 
 
-- use AccelStepper.h for stepper motors
-
-
 ## LED Blink
 
 - Note, onboard LED is inverted - LOW turns it on!
+- Onboard LED is connected to GPIO2
 
 ```cpp
 void setup() {
@@ -168,5 +166,31 @@ void loop() {
   delay(1000);                       // wait for a second
   digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(1000);                       // wait for a second
+}
+```
+
+## Stepper motor
+
+- use AccelStepper.h for stepper motors
+
+## WIFI
+
+```cpp
+
+#include "ESP8266WiFi.h"
+
+char ssid[]           = "MyWifiNetwork SSID";
+const char* password  = "MyP@ssword"; 
+
+void setup() {
+Serial.begin(115200);
+Serial.print("Connecting to ");
+Serial.println(ssid);
+WiFi.begin(ssid, password);
+while (WiFi.status() != WL_CONNECTED) {
+delay(500);
+Serial.print(".");
+}
+Serial.println("WiFi connected.");
 }
 ```
