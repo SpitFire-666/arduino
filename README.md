@@ -133,6 +133,10 @@ void loop()
 
 # ESP8266
 
+
+![image](https://user-images.githubusercontent.com/38451588/177111280-908840dd-53ae-4d20-b13a-3d0ed423ef69.png)
+  
+
 - Add addiitonal board manager URL:
 File, Preferences 
 http://arduino.esp8266.com/stable/package_esp8266com_index.json
@@ -142,3 +146,27 @@ http://arduino.esp8266.com/stable/package_esp8266com_index.json
 - Set board type
 
 ![image](https://user-images.githubusercontent.com/38451588/173273458-779e091e-7382-4fdb-ac6e-0c2eed6d9bbe.png)
+
+
+- use AccelStepper.h for stepper motors
+
+
+## LED Blink
+
+- Note, onboard LED is inverted - LOW turns it on!
+
+```cpp
+void setup() {
+  // initialize digital pin LED_BUILTIN as an output.
+  #define LED_BUILTIN 2
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+// the loop function runs over and over again forever
+void loop() {
+  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
+  delay(1000);                       // wait for a second
+  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
+  delay(1000);                       // wait for a second
+}
+```
