@@ -12,6 +12,11 @@
 ![image](https://user-images.githubusercontent.com/38451588/177109891-7473963c-98fe-4bf2-9dec-22a12a80e93d.png)
 
 
+# Power Saving 
+
+an Arduino Nano draws less power than the Arduino UNO, and the Pro-Mini draws less than the Nano.
+
+
 # Sketches
 
 ## Onboard LED - blink
