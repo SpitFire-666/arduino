@@ -201,4 +201,8 @@ Serial.print(".");
 }
 Serial.println("WiFi connected.");
 }
+
+void loop() {
+
+}
 ```
